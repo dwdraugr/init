@@ -1,0 +1,1 @@
+ping -c 2 $(ifconfig en0 | grep broadcast | awk '{ print $6 }') | grep "bytes from" | awk '{ print $4 }' | sed 's/://g'

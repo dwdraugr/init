@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#STR="Sarah:Lisa:Jack:Rahul:Johnson"  #String with names
+#IFS=':' read -ra NAMES <<< "$STR"    #Convert string to array
+
+#Print all names from array
+#for i in "${NAMES[@]}"; do
+#	    echo $i
+#done
+
+printf "%-25s|%- 8s|%25s\n" "LOGIN" "UID" "PATH"
+echo "----------------------------------------------------"
+
+while IFS=':' read -ra line; do
+	printf "%-25s| %-7d|%25s\n" "${line[0]}" "${line[2]}" "${line[5]}"
+done < "/etc/passwd"

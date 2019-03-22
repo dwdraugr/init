@@ -1,0 +1,1 @@
+host $(ipconfig getifaddr en0) | awk '{ print $5 }' 

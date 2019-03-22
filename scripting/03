@@ -1,0 +1,4 @@
+CITY=Moscow
+echo ""
+curl -m 2 wttr.in/${CITY}?0 2> /dev/null
+echo ""
